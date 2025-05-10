@@ -14,8 +14,11 @@ app.use(cors());
 app.use(
   cors({
     origin: ["http://localhost:3000", "https://www.electgoods.com"],
+    methods: ["POST", "GET"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+app.options("*", cors());
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
