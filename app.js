@@ -12,7 +12,11 @@ const razorpay = new Razorpay({
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://www.electgoods.com"],
+    origin: [
+      "http://localhost:3000",
+      "https://www.electgoods.com",
+      "https://checkout.razorpay.com",
+    ],
     methods: ["POST", "GET"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
