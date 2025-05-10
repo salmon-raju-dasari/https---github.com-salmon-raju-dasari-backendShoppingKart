@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://shopping-kart-5e81a.web.app"],
+    origin: ["http://localhost:3000", "https://www.electgoods.com"],
   })
 );
 
